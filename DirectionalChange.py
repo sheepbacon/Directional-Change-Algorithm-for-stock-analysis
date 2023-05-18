@@ -148,27 +148,6 @@ if __name__ == '__main__':
     
     datafilename = "./DailyClosing-SelectedIndices-2019to2021.xlsx"
     index_data = pd.read_excel(datafilename, index_col=0, parse_dates=True, sheet_name=None)
-    for i in index_data['Indices']['Index']:
-        print(i)
-        
-    all_return_record = []
-    all_return_mean = []
-    all_volatilities = []
-    all_VaR = []
-    all_CVaR = []
-    all_sharpe = []
-
-
-    for i in index_data['Indices']['Index']:
-        current_price = index_data[i]['Close']
-        returns = current_price.pct_change() # caculate the array of return
-        all_return_record.append(returns) # store to the record
-        all_return_mean.append(returns.mean())
-        all_volatilities.append(returns.std())
-        all_VaR.append(qs.stats.var(current_price))
-        all_CVaR.append(qs.stats.cvar(current_price))
-        all_sharpe.append(qs.stats.sharpe(current_price))
-
 
     data=index_data['ASX200']['Close']
     data.reset_index(drop=True, inplace=True)
