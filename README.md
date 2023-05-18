@@ -1,1 +1,1 @@
-# Directional-Change-Algorithm-for-stock-analysis
+# Directional-Change-Algorithm-for-stock-analysis![DC analysis result](https://github.com/sheepbacon/Directional-Change-Algorithm-for-stock-analysis/assets/72983721/2064f8f4-c12a-475b-a97a-d3abb65b9345)
